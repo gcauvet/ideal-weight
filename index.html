@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="Ideal weight">
+
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <style>
+            .floatRight {float: right;}
+
+            #toast-container {
+                top: auto !important;
+                right: auto !important;
+                bottom: 10%;
+                left:7%;
+            }
+
+            @import url('https://fonts.googleapis.com/css?family=Fira+Sans:300');
+            
+            body {
+                font-family: 'Fira Sans', sans-serif;
+                line-height: 1.6;
+                color: #222;
+                
+                padding: 2rem;
+                margin: auto;
+                background: #fafafa;
+            }
+
+            img {
+                max-width: 100%;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            h1, h2, strong {
+                color: #111;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div class="container">
+
+            <div class="row">
+                <div class='card-panel col s12'>
+                    <h5> Ideal weight
+                        <span class='floatRight'>
+                            <a href='../' class="waves-effect waves-teal btn-flat btn-small"><i class="material-icons left">chevron_left</i>Back</a>
+                        </span>
+                    </h5>
+                </div>
+            </div>
+
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        
+                        <div class="input-field col s6">
+                            <input class="" id="lorentzHeight" type="text">
+                            <label class="active" for="lorentzHeight">Height</label>
+                            <span class="helper-text">in cm</span>
+                        </div>
+
+                        <div class="input-field col s2">
+                            <p>
+                                <label>
+                                    <input class="with-gap" name="group3" type="radio" checked />
+                                    <span>Male</span>
+                                </label>
+                                <label>
+                                    <input class="with-gap" name="group3" type="radio"/>
+                                    <span>Female</span>
+                                </label>
+                            </p>
+                        </div>
+
+                        <div class="input-field col s2">
+                            <a id="LorentzResult" class="waves-effect waves-light btn"><i class="material-icons left">rss_feed</i>Calculate</a>
+                        </div>
+
+                        <div class="input-field col s2">
+                            <input class="" id="LorentzResultInput" type="text" disabled>
+                            <label class="active" for="LorentzResultInput"></label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s3">
+                            <input class="" id="CreffHeight" type="text">
+                            <label class="active" for="CreffHeight">Height</label>
+                            <span class="helper-text">in cm</span>
+                        </div>
+
+                        <div class="input-field col s2">
+                            <input class="" id="CreffAge" type="text">
+                            <label class="active" for="CreffAge">Age</label>
+                        </div>
+
+                        <div class="input-field col s3">
+                            <p>
+                                <label>
+                                    <input class="with-gap" name="group3" type="radio" checked />
+                                    <span>Small</span>
+                                </label>
+                                <label>
+                                    <input class="with-gap" name="group3" type="radio" />
+                                    <span>Medium</span>
+                                </label>
+                                <label>
+                                    <input class="with-gap" name="group3" type="radio" />
+                                    <span>Large</span>
+                                </label>
+                            </p>
+                        </div>
+            
+                        <div class="input-field col s2">
+                            <a id="CreffResult" class="waves-effect waves-light btn"><i class="material-icons left">rss_feed</i>Calculate</a>
+                        </div>
+            
+                        <div class="input-field col s2">
+                            <input class="" id="CreffResultInput" type="text" disabled>
+                            <label class="active" for="CreffResultInput"></label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+
+                        <div class="input-field col s4">
+                            <input class="" id="MonnerotDumaineHeight" type="text">
+                            <label class="active" for="MonnerotDumaineHeight">Height</label>
+                            <span class="helper-text">in cm</span>
+                        </div>
+                        
+                        <div class="input-field col s4">
+                            <input class="" id="MonnerotDumaineWristSize" type="text">
+                            <label class="active" for="MonnerotDumaineWristSize">Wrist size</label>
+                            <span class="helper-text">in cm</span>
+                        </div>
+
+                        <div class="input-field col s2">
+                            <a id="MonnerotDumaineResult" class="waves-effect waves-light btn"><i class="material-icons left">rss_feed</i>Calculate</a>
+                        </div>
+            
+                        <div class="input-field col s2">
+                            <input class="" id="MonnerotDumaineResultInput" type="text" disabled>
+                            <label class="active" for="MonnerotDumaineResultInput"></label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+            
+                        <div class="input-field col s4">
+                            <input class="" id="BMIHeight" type="text">
+                            <label class="active" for="BMIHeight">Height</label>
+                            <span class="helper-text">in cm</span>
+                        </div>
+            
+                        <div class="input-field col s4">
+                            <input class="" id="BMIWeight" type="text">
+                            <label class="active" for="BMIWeight">Weight</label>
+                            <span class="helper-text">in kg</span>
+                        </div>
+            
+                        <div class="input-field col s2">
+                            <a id="BMIResult" class="waves-effect waves-light btn"><i
+                                    class="material-icons left">rss_feed</i>Calculate</a>
+                        </div>
+            
+                        <div class="input-field col s2">
+                            <input class="" id="BMIResultInput" type="text" disabled>
+                            <label class="active" for="BMIResultInput"></label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="row">
+                2019 - Smaha - <a href="https://www.smaha-consulting.com">https://www.smaha-consulting.com</a>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <script type="text/javascript">
+
+        </script>
+    </body>
+</html>
